@@ -8,8 +8,8 @@ spec:
   source:
     repoURL: https://github.com/barrozz/argo-crm-ARM-compliant.git
     targetRevision: HEAD
-    chart: crm
-    # path: /
+    # chart: crm
+    path: ./charts/crm
   destination:
     server: https://kubernetes.default.svc
     namespace: default
