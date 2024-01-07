@@ -1,0 +1,21 @@
+mongodb:
+  architecture: replicaset
+  useStatefulSet: true
+  replicaCount: 3
+
+  auth:
+    enabled: true
+    rootPassword: milliger
+    replicaSetKey: milliger
+
+  image:
+    registry: docker.io
+    repository: zcube/bitnami-compat-mongodb
+    tag: latest
+    pullPolicy: IfNotPresent
+
+persistence:
+  enabled: true
+  size: 150Mi
+  storageClass: standard  # optional, remove or set to "-" if you don't want to specify a storage class
+
