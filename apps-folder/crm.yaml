@@ -1,14 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: app-of-apps
+  name: crm
+  namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/barrozz/argo-crm-ARM-compliant.git
     targetRevision: HEAD
-    path: "apps-folder"
-  destination: 
+    chart: crm
+    # path: /
+  destination:
     server: https://kubernetes.default.svc
     namespace: default
 
